@@ -1,43 +1,69 @@
-<%-include ../partials/header.ejs %>
-<%-include ../partials/main_nav.ejs %>
-<!--Main content for displaying my database-->
-<h1 class="recipetitle">Recipes</h1>
+<%- include ../partials/header.ejs %> <!--Header-->
+<%- include ../partials/main_nav.ejs %> <!--Main Navigation-->
+
+<h1 class="recipetitle">Recipes</h1> <!--Title-->
 <main class="container mx-auto">
     <div class="row">
-        <div class="offset-md-1 col-md-10 ">
+        <div class="offset-md-1 col-md-10">
             <br>
-            <a href="/recipes/add" class="btn btn-primary" role="button"><i class="fas fa-plus-circle"></i> Add a Recipe</a>
+            <a href="/recipes/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add a Recipe
+            </a> <!--Button to add a recipe-->
             <br>
-            <table class="table table-bordered table-striped table-hover">
+            <table class="table table-bordered table-striped table-hover"> <!--Creating a table-->
                 <!--Header Row-->
                 <tr class="d-flex">
-                    <th class="text-center col-2">Name</th>
-                    <th class="text-center col-4">Ingredients</th>
-                    <th class="text-center col-4">Instructions</th>
-                    <th class="text-center col-1">Time</th>
-                    <th class="text-center col-1">Type</th>
-                    <th class="text-center col-1">Edit</th>
-                    <th class="text-center col-1">Delete</th>
+                    <th class="text-center col-2">Name</th> <!--Column name-->
+                    <th class="text-center col-4">Ingredients</th> <!--Column name-->
+                    <th class="text-center col-4">Instructions</th> <!--Column name-->
+                    <th class="text-center col-1">Time</th> <!--Column name-->
+                    <th class="text-center col-1">Type</th> <!--Column name-->
+                    <th class="text-center col-1">Edit</th> <!--Column name-->
+                    <th class="text-center col-1">Delete</th> <!--Column name-->
                 </tr>
-                <!--for/while loop-->
-                <% for(let count=0; count<RecipeList.length;count++) { %>
+                <!--Loop through recipes-->
+                <% for(let count=0; count<RecipeList.length; count++) { %>
                     <tr class="d-flex">
-                        <td class="text-center col-2"><%= RecipeList[count].name %></td>
-                        <td class="text-center col-4"><%= RecipeList[count].ingredients %></td>
-                        <td class="text-center col-4"><%= RecipeList[count].instructions %></td>
-                        <td class="text-center col-1"><%= RecipeList[count].time %></td>
-                        <td class="text-center col-1"><%= RecipeList[count].type %></td>
+                        <td class="text-center col-2"><%= RecipeList[count].name %></td> <!--adding the name to the rows-->
+                        <td class="text-center col-4"><%= RecipeList[count].ingredients %></td> <!--adding the ingredients to the rows-->
+                        <td class="text-center col-4"><%= RecipeList[count].instructions %></td> <!--adding the instructions to the rows-->
+                        <td class="text-center col-1"><%= RecipeList[count].time %></td> <!--adding the time to the rows-->
+                        <td class="text-center col-1"><%= RecipeList[count].type %></td> <!--adding the type to the rows-->
                         <td class="text-center col-1">
-                        <a href="/Recipes/edit/<%= RecipeList[count]._id%>" class="btn btn-primary btn-sm">
-                            <i class="fas fa-pencil-alt"></i>Edit</a></td>
-                            <td class="text-center col-1">
-                        <a href="/Recipes/delete/<%= RecipeList[count]._id%>" class="btn btn-danger btn-sm"> 
-                            <i class="fas fa-trash-alt"></i>Delete</a></td>
+                            <a href="/Recipes/edit/<%= RecipeList[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit
+                            </a> <!--Edit button-->
+                        </td>
+                        <td class="text-center col-1">
+                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal<%= RecipeList[count]._id %>">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </button> <!--Delete button-->
+                        </td>
                     </tr>
+
+                    <!--Conformation for the delete-->
+                    <div class="modal fade" id="deleteModal<%= RecipeList[count]._id %>" tabindex="-1" aria-labelledby="deleteModalLabel<%= RecipeList[count]._id %>" aria-hidden="true"> <!--Bootstrap modal for confirming deletion of this specific recipe-->
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="deleteModalLabel<%= RecipeList[count]._id %>">Confirm Delete</h5> <!--Title of the conformation-->
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!--Button for delete-->
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure you want to delete the recipe "<%= RecipeList[count].name %>"?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button> <!--Button for cancel-->
+                                    <a href="/Recipes/delete/<%= RecipeList[count]._id %>" class="btn btn-danger">Delete</a> <!--after delete redirect the page-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <% } %>
             </table>
             <br><br><br><br>
         </div>
     </div>
 </main>
-<%-include ../partials/footer.ejs %>
+
+<%- include ../partials/footer.ejs %> <!--Footer-->
