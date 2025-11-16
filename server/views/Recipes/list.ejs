@@ -3,12 +3,12 @@
 <!--Main content for displaying my database-->
 <main class="container">
     <div class="row">
-        <div class="offset-md-1 col-md-10">
+        <div class="offset-md-1 col-md-10 ">
             <h1><%= title %></h1>
             <br>
             <a href="/recipes/add" class="btn btn-primary" role="button"><i class="fas fa-plus-circle"></i> Add a Recipe</a>
             <br>
-            <table class="table table-bordered table-striped table-hover">
+            <table class="table table-bordered table-striped table-hover ">
                 <!--Header Row-->
                 <tr class="d-flex">
                     <th class="text-center col-2">Name</th>
@@ -21,21 +21,21 @@
                 </tr>
                 <!--for/while loop-->
                 <% for(let count=0; count<RecipeList.length;count++) { %>
-                    <tr class="d-flex">
                         <td class="text-center col-2"><%= RecipeList[count].name %></td>
                         <td class="text-center col-4"><%= RecipeList[count].ingredients %></td>
                         <td class="text-center col-4"><%= RecipeList[count].instructions %></td>
                         <td class="text-center col-1"><%= RecipeList[count].time %></td>
                         <td class="text-center col-1"><%= RecipeList[count].type %></td>
                         <td class="text-center col-1">
-                        <a href="/Recipes/edit/<%=RecipeList[count]._id%>" class="btn btn-primary btn-sm">
+                        <a href="/Recipes/edit/<%= RecipeList[count]._id%>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i>Edit</a></td>
                             <td class="text-center col-1">
-                        <a href="/Recipes/delete/<%=RecipeList[count]._id%>" class="btn btn-danger btn-sm"> 
+                        <a href="/Recipes/delete/<%= RecipeList[count]._id%>" class="btn btn-danger btn-sm"> 
                             <i class="fas fa-trash-alt"></i>Delete</a></td>
                     </tr>
                 <% } %>
             </table>
+            <br><br><br><br>
         </div>
     </div>
 </main>

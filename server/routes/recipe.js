@@ -98,7 +98,7 @@ router.post('/edit/:id',async(req,res,next)=>{
             "type":req.body.type
         })
         Recipe.findByIdAndUpdate(id, updateRecipe).then(()=>{
-            res.redirect("/recipe")
+            res.redirect("/recipes")
         })
     }
     catch(err)
@@ -112,7 +112,7 @@ router.get('/delete/:id',async(req,res,next)=>{
     try{
         let id = req.params.id;
         Recipe.deleteOne({_id:id}).then(()=>{
-            res.redirect("/recipe")
+            res.redirect("/recipes")
         })
     }
     catch(err)

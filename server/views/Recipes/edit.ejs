@@ -1,0 +1,56 @@
+<%- include ../partials/header.ejs %>   
+<%- include ../partials/main_nav.ejs %>
+<!--Content for adding the book-->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%=title%></h1>
+
+            <<form class="form" method="post">
+                <div class="form-group">
+                    <label for="nameTextField">Dish Name</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter recipe's name"
+                    name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="ingredients">Ingredients</label>
+                    <textarea type="text" class="form-control"
+                    id="ingredients"
+                    placeholder="Enter the ingredients"
+                    name="ingredients" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="instructions">Instructions</label>
+                    <textarea type="text" class="form-control"
+                    id="instructions"
+                    placeholder="Enter the instructions"
+                    name="instructions" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="timeTextArea">Time</label>
+                    <input type="text" class="form-control"
+                    id="timeTextArea"
+                    placeholder="Enter the time it takes"
+                    name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="TypeTextField">Type</label>
+                    <input type="text" class="form-control"
+                    id="TypeTextField"
+                    placeholder="Enter the type of dish"
+                    name="type" required>
+                </div>
+                <br>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit
+                </button>
+                <a href="/recipes" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include ../partials/footer.ejs %> 
