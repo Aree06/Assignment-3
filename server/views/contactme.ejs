@@ -1,0 +1,55 @@
+<%- include partials/header %> <!--Header-->
+<%- include partials/main_nav %> <!--Navigation-->
+
+ <!-- Contact Card -->
+  <br><br>
+      <div class="card mx-auto" style="width: 600px;"> <!--Card centered with fixed width-->
+        <div class="card-body"> <!--Card body-->
+
+          <h1 class="contactTitle text-center">Contact Us</h1> <!--Contact page Title-->
+          <br>
+
+          <form class="row g-3 needs-validation text-center mx-auto" style="width: 500px;" novalidate> 
+            
+            <!--First name-->
+            <div class="mb-3"> 
+              <label for="firstName" class="form-label">First Name:</label> 
+              <input type="text" class="form-control" id="firstName" required placeholder="Enter Your First Name"> 
+              <div class="valid-feedback">Looks good!</div> 
+              <div class="invalid-feedback">Please enter your first name.</div> 
+            </div>
+
+            <!--Last name-->
+            <div class="mb-3"> 
+              <label for="lastName" class="form-label">Last Name:</label> 
+              <input type="text" class="form-control" id="lastName" required placeholder="Enter Your Last Name"> 
+              <div class="valid-feedback">Looks good!</div> 
+              <div class="invalid-feedback">Please enter your last name.</div> 
+            </div>
+
+            <!--Email-->
+            <div class="mb-3"> 
+              <label for="email" class="form-label">Email Address:</label> 
+              <input type="email" class="form-control" id="email" required placeholder="Enter Your Email"> 
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Please enter a valid email address.</div> 
+            </div>
+
+            <!--Comments-->
+            <div class="mb-3"> 
+              <label for="comments" class="form-label">Any Comments:</label> 
+              <textarea class="form-control" id="comments" rows="3" placeholder="Enter any Questions or Queries"></textarea> 
+            </div>
+
+            <!--Submit button-->
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Submit form</button> <!--the submit button-->
+            </div>
+
+
+          </form>
+</div>
+
+<%- include partials/footer %> <!--Footer-->
+
+<script src="/Script/form_validation.js"></script> <!-- Link to external JavaScript file for form validation -->

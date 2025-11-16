@@ -1,0 +1,33 @@
+body {
+  font: 16px "times new roman", sans-serif; /* Set font family and size */
+  background-color: #f0d9aa; /* Light beige background color */
+}
+
+.hometitle
+{
+    text-align: center;
+    margin-top: 180px;
+}
+
+h1
+{
+    text-align: center;
+}
+
+.paracontact
+{
+    text-align: center;
+}
+
+.abouttile
+{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.card
+{
+    text-align: center;
+    margin-left: 450px;
+
+}

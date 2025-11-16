@@ -14,19 +14,12 @@ router.get('/home', function(req, res, next) {
 
 /* GET About page. */
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About' });
+  res.render('aboutme', { title: 'About' });
 });
-/* GET products page. */
-router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products' });
-});
-/* GET services page. */
-router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Services' });
-});
+
 /* GET contact us page. */
 router.get('/contactus', function(req, res, next) {
-  res.render('index', { title: 'Contact us' });
+  res.render('contactme', { title: 'Contact us' });
 });
 
 module.exports = router;
