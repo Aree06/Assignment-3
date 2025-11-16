@@ -1,14 +1,14 @@
 <%-include ../partials/header.ejs %>
 <%-include ../partials/main_nav.ejs %>
 <!--Main content for displaying my database-->
-<main class="container">
+<h1><%= title %></h1>
+<main class="container mx-auto">
     <div class="row">
         <div class="offset-md-1 col-md-10 ">
-            <h1><%= title %></h1>
             <br>
             <a href="/recipes/add" class="btn btn-primary" role="button"><i class="fas fa-plus-circle"></i> Add a Recipe</a>
             <br>
-            <table class="table table-bordered table-striped table-hover ">
+            <table class="table table-bordered table-striped table-hover">
                 <!--Header Row-->
                 <tr class="d-flex">
                     <th class="text-center col-2">Name</th>
@@ -21,6 +21,7 @@
                 </tr>
                 <!--for/while loop-->
                 <% for(let count=0; count<RecipeList.length;count++) { %>
+                    <tr class="d-flex">
                         <td class="text-center col-2"><%= RecipeList[count].name %></td>
                         <td class="text-center col-4"><%= RecipeList[count].ingredients %></td>
                         <td class="text-center col-4"><%= RecipeList[count].instructions %></td>

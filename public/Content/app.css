@@ -1,12 +1,8 @@
-body {
-  font: 16px "times new roman", sans-serif; /* Set font family and size */
-  background-color: #f0d9aa; /* Light beige background color */
-}
 
 .hometitle
 {
     text-align: center;
-    margin-top: 180px;
+    margin-top: 50px;
 }
 
 h1
