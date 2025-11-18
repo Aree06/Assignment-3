@@ -22,11 +22,12 @@ Features:
     -Delete recipes
 
 Where I used Bootstrap & Fontawesome:
-I used bootstrap on the home page, about me page and contact me page. I used fontawesome for the buttons on the header and footer and on the add, edit and delete buttons. The rest of the code is from the lecture 9 & 10. 
+I used bootstrap on the home page, about me page and contact me page. I used fontawesome for the buttons on the header and footer and on the add, edit and delete buttons. The rest of the code is from the lecture 9 & 10. I also did my own css. 
 
 Refrences(APA 7th):
 Get started with bootstrap. · Bootstrap v5.3. (n.d.). https://getbootstrap.com/docs/5.3/getting-started/introduction/ 
 Font awesome. Font Awesome. (n.d.). https://fontawesome.com/?o=r 
+
 
 
 
