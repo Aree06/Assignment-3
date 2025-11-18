@@ -1,37 +1,44 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
+    <!--Logo on the header-->
     <img src="/Asset/images/chefhat.png" class="img-fluid rounded-circle" alt="homeimage" style="width:50px; height:50px;">
-    <a class="navbar-brand" href="/">  Recipe Manager</a>
+    <a class="navbar-brand" href="/">  Recipe Manager</a> <!--Title on header-->
+    <!--Boostrap is responsive-->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!--Collapsible navigation links-->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!--Home Link-->
         <li class="nav-item">
           <% if (title == "Home") { %>
-          <a class="nav-link active" aria-current="page" href="/home"><i class="fa-solid fa-lg fa-house"></i> Home</a>
+          <a class="nav-link active" aria-current="page" href="/home"><i class="fa-solid fa-lg fa-house"></i> Home</a> <!--The button for home when active-->
           <% } else { %>
-            <a class="nav-link" aria-current="page" href="/home"><i class="fa-solid fa-lg fa-house"></i> Home</a>
+            <a class="nav-link" aria-current="page" href="/home"><i class="fa-solid fa-lg fa-house"></i> Home</a> <!--The button of home when not active-->
           <% } %>
           </li>
+          <!--About me Link-->
         <li class="nav-item">
         <% if (title == "About") { %>
-          <a class="nav-link active" aria-current="page" href="/about"><i class="fa-solid fa-lg fa-circle-info"></i> About</a>
+          <a class="nav-link active" aria-current="page" href="/about"><i class="fa-solid fa-lg fa-circle-info"></i> About</a> <!--The button for about me when active-->
         <% } else { %>
-          <a class="nav-link" aria-current="page" href="/about"><i class="fa-solid fa-lg fa-circle-info"></i> About</a>
+          <a class="nav-link" aria-current="page" href="/about"><i class="fa-solid fa-lg fa-circle-info"></i> About</a> <!--The button of about me when not active-->
         <% } %>
+        <!--Recipes link-->
         <li class="nav-item">
           <% if (title == "Recipes") { %>
-          <a class="nav-link active" aria-current="page" href="/Recipes"><i class="fa-solid fa-lg fa-book"></i> Recipes</a>
+          <a class="nav-link active" aria-current="page" href="/Recipes"><i class="fa-solid fa-lg fa-book"></i> Recipes</a> <!--The button for recipe when active-->
           <% } else { %>
-            <a class="nav-link" aria-current="page" href="/Recipes"><i class="fa-solid fa-lg fa-book"></i> Recipes</a>
+            <a class="nav-link" aria-current="page" href="/Recipes"><i class="fa-solid fa-lg fa-book"></i> Recipes</a> <!--The button of recipe when not active-->
           <% } %>
           </li>
+          <!--Contact me link-->
         <li class="nav-item">
           <% if (title == "Contact us") { %>
-          <a class="nav-link active" aria-current="page" href="/contactus"><i class="fa-solid fa-lg fa-phone"></i> Contact Me</a>
+          <a class="nav-link active" aria-current="page" href="/contactus"><i class="fa-solid fa-lg fa-phone"></i> Contact Me</a> <!--The button for contact me when active-->
         <% } else { %>
-          <a class="nav-link" aria-current="page" href="/contactus"><i class="fa-solid fa-lg fa-phone"></i> Contact Me</a>
+          <a class="nav-link" aria-current="page" href="/contactus"><i class="fa-solid fa-lg fa-phone"></i> Contact Me</a> <!--The button of contact me when not active-->
           <% } %>
         </li>
     </div>

@@ -1,46 +1,46 @@
 
 .hometitle
 {
-    text-align: center;
-    margin-top: 50px;
-    font-weight: bold;
+    text-align: center; /* to center text*/
+    margin-top: 50px; /* to have a bit of space on the top*/
+    font-weight: bold; /* To bold the title*/
 }
 
 h1
 {
-    text-align: center;
+    text-align: center; /* to center text*/
 }
 
 .paracontact
 {
-    text-align: center;
+    text-align: center; /* to center text*/
 }
 
 .abouttile
 {
-    text-align: center;
-    margin-top: 80px;
-    font-weight: bold;
+    text-align: center; /* to center text*/
+    margin-top: 80px; /* to have a bit of space on the top*/
+    font-weight: bold; /* To bold the title*/
 }
 
 .recipetitle
 {
-    font-weight: bold;
+    font-weight: bold; /* To bold the title*/
 }
 
 .contactTitle
 {
-    font-weight: bold;
+    font-weight: bold; /* To bold the title*/
 }
 
 .card
 {
-    text-align: center;
-    margin-left: 450px;
+    text-align: center; /* to center text*/
+    margin-left: 450px; /* to have a bit of space on the left*/
 }
 
 .paraaboutme
 {
-    text-align: center;
-    font-weight: bold;
+    text-align: center; /* to center text*/
+    font-weight: bold; /* To bold the title*/
 }
